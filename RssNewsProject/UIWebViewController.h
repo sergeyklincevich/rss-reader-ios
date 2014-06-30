@@ -11,6 +11,5 @@
 @interface UIWebViewController : UIViewController
 
 @property (strong, nonatomic) NSString* openURL;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

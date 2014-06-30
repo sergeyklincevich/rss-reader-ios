@@ -9,7 +9,14 @@
 #import "UIWebViewController.h"
 #import "Reachability.h"
 
-@interface UIWebViewController ()
+#define SCREEN_WIDTH ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
+@interface UIWebViewController () <UIWebViewDelegate>
+{
+    UIWebView *webView;
+    UIView* loadingView;
+}
 
 @end
 
@@ -36,7 +43,7 @@
     
     NSURL *url = [NSURL URLWithString:urlReadyForConvert];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:urlRequest];
+    [webView loadRequest:urlRequest];
 //   [[UIApplication sharedApplication] openURL:url];
     } else
     {
@@ -69,9 +76,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configureView];
-//    self.navigationItem.hidesBackButton = YES; // Important
-//	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-//                            style:UIBarButtonItemStyleBordered target:self action:@selector(myCustomBack)];
+    
+    loadingView = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2 - 40, 80, 80)];
+    loadingView.backgroundColor = [UIColor colorWithWhite:0. alpha:0.6];
+    loadingView.layer.cornerRadius = 5;
+    webView.delegate = self;
+    
+    UIActivityIndicatorView *activityView=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityView.center = CGPointMake(loadingView.frame.size.width / 2.0, 35);
+    [activityView startAnimating];
+    activityView.tag = 100;
+    [loadingView addSubview:activityView];
+    
+    UILabel* lblLoading = [[UILabel alloc]initWithFrame:CGRectMake(0, 48, 80, 30)];
+    lblLoading.text = @"Loading...";
+    lblLoading.textColor = [UIColor whiteColor];
+    lblLoading.font = [UIFont fontWithName:lblLoading.font.fontName size:15];
+    lblLoading.textAlignment = NSTextAlignmentCenter;
+    [loadingView addSubview:lblLoading];
+    
+    [self.view addSubview:loadingView];
+}
+
++ (CGFloat) window_height   {
+    return [UIScreen mainScreen].applicationFrame.size.height;
+}
+
++ (CGFloat) window_width   {
+    return [UIScreen mainScreen].applicationFrame.size.width;
 }
 
 -(void) myCustomBack {
@@ -95,5 +127,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [loadingView setHidden:NO];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [loadingView setHidden:YES];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [loadingView setHidden:YES];
+}
 
 @end
