@@ -11,8 +11,6 @@
 
 @interface NewsTableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *textDate;
-
 @property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic, strong) NSArray* listNews;
 @property (nonatomic, strong) NSMutableArray* listDate;
