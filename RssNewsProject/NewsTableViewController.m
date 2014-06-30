@@ -160,7 +160,7 @@
     UITextField *dateCustomText = (UITextField *)[cell viewWithTag:101];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
+    [dateFormatter setDateFormat:@"HH:mm"];
     
     NSString *stringDate = [dateFormatter stringFromDate:info.pubDate];
     

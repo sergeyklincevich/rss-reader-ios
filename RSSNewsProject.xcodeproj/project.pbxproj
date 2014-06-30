@@ -97,8 +97,6 @@
 		848975AE196163CE0068F0BE /* RssNewsProject */ = {
 			isa = PBXGroup;
 			children = (
-				8468B61D196180C3004020E8 /* Resources */,
-				8468B61C19618045004020E8 /* Support */,
 				848975AF196163CE0068F0BE /* AppDelegate.h */,
 				848975B0196163CE0068F0BE /* AppDelegate.m */,
 				848975B1196163CE0068F0BE /* Main.storyboard */,
@@ -113,6 +111,8 @@
 				848975BD196163CE0068F0BE /* RssNews.xcdatamodeld */,
 				848975C1196163CE0068F0BE /* UIWebViewController.h */,
 				848975C2196163CE0068F0BE /* UIWebViewController.m */,
+				8468B61C19618045004020E8 /* Support */,
+				8468B61D196180C3004020E8 /* Resources */,
 			);
 			path = RssNewsProject;
 			sourceTree = "<group>";
