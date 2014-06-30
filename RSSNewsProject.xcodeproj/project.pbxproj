@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		845DF113195C6B1300320C9E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845DF112195C6B1300320C9E /* SDWebImage.framework */; };
 		845DF115195C6C0E00320C9E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845DF114195C6C0E00320C9E /* ImageIO.framework */; };
+		8468B61F196180E6004020E8 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8468B61E196180E6004020E8 /* placeholder.jpg */; };
 		848975C3196163CE0068F0BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848975B0196163CE0068F0BE /* AppDelegate.m */; };
 		848975C4196163CE0068F0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848975B1196163CE0068F0BE /* Main.storyboard */; };
 		848975C5196163CE0068F0BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 848975B3196163CE0068F0BE /* InfoPlist.strings */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		845DF112195C6B1300320C9E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		845DF114195C6C0E00320C9E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		8468B61E196180E6004020E8 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		848975AF196163CE0068F0BE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		848975B0196163CE0068F0BE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		848975B2196163CE0068F0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,13 +76,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8468B61C19618045004020E8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				848975C0196163CE0068F0BE /* RSSNewsProject-Prefix.pch */,
+				848975B3196163CE0068F0BE /* InfoPlist.strings */,
+				848975BF196163CE0068F0BE /* RSSNewsProject-Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		8468B61D196180C3004020E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8468B61E196180E6004020E8 /* placeholder.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		848975AE196163CE0068F0BE /* RssNewsProject */ = {
 			isa = PBXGroup;
 			children = (
+				8468B61D196180C3004020E8 /* Resources */,
+				8468B61C19618045004020E8 /* Support */,
 				848975AF196163CE0068F0BE /* AppDelegate.h */,
 				848975B0196163CE0068F0BE /* AppDelegate.m */,
 				848975B1196163CE0068F0BE /* Main.storyboard */,
-				848975B3196163CE0068F0BE /* InfoPlist.strings */,
 				848975B5196163CE0068F0BE /* Images.xcassets */,
 				848975B6196163CE0068F0BE /* main.m */,
 				848975B7196163CE0068F0BE /* NewsEntity.h */,
@@ -90,8 +111,6 @@
 				848975BB196163CE0068F0BE /* Reachability.h */,
 				848975BC196163CE0068F0BE /* Reachability.m */,
 				848975BD196163CE0068F0BE /* RssNews.xcdatamodeld */,
-				848975BF196163CE0068F0BE /* RSSNewsProject-Info.plist */,
-				848975C0196163CE0068F0BE /* RSSNewsProject-Prefix.pch */,
 				848975C1196163CE0068F0BE /* UIWebViewController.h */,
 				848975C2196163CE0068F0BE /* UIWebViewController.m */,
 			);
@@ -186,6 +205,7 @@
 				848975CC196163CE0068F0BE /* RSSNewsProject-Info.plist in Resources */,
 				848975C6196163CE0068F0BE /* Images.xcassets in Resources */,
 				848975C4196163CE0068F0BE /* Main.storyboard in Resources */,
+				8468B61F196180E6004020E8 /* placeholder.jpg in Resources */,
 				848975C5196163CE0068F0BE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +382,7 @@
 			children = (
 				848975BE196163CE0068F0BE /* RssNews.xcdatamodel */,
 			);
+			currentVersion = 848975BE196163CE0068F0BE /* RssNews.xcdatamodel */;
 			path = RssNews.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
