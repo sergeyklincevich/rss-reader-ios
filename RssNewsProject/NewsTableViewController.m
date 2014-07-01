@@ -10,6 +10,7 @@
 #import "NewsEntity.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Reachability.h"
+#import "CustomCell.h"
 
 @interface NewsTableViewController () <NSXMLParserDelegate> {
     NSXMLParser *parser;
@@ -135,25 +136,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     int positionInList = [self getPositionInList:indexPath];
-//    if (indexPath.section == 0)
-//    {
-//        positionInList = indexPath.row;
-//    } else
-//    {
-//        for (int i = 0; i < indexPath.section ; i++) {
-//            positionInList += [self tableView:tableView numberOfRowsInSection:i];
-//        }
-//        positionInList +=  + indexPath.row;
-//    }
-    
-//    // Configure the cell...
+
+    // Configure the cell...
     NewsEntity *info = [listNews objectAtIndex:positionInList];
     cell.textLabel.text = info.title;
     cell.detailTextLabel.text = info.describe;
@@ -170,11 +161,13 @@
     
     NSString *testStr = info.linkImage;
     testStr = [testStr substringWithRange:NSMakeRange(1, [testStr length] - 2)];
-    
-    NSURL * urlImage = [NSURL URLWithString:testStr];
 
+    NSURL * urlImage = [NSURL URLWithString:testStr];
     
-    [cell.imageView setImageWithURL:urlImage placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
+    [cell.imageView setImageWithURL:urlImage placeholderImage:[UIImage imageNamed:@"placeholder.jpg"] ];
+
+  
+    
     return cell;
 }
 

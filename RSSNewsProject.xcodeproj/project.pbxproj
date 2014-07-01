@@ -26,6 +26,8 @@
 		849C47BE195965E6004AADA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C47BD195965E6004AADA4 /* CoreGraphics.framework */; };
 		849C47C0195965E6004AADA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C47BF195965E6004AADA4 /* UIKit.framework */; };
 		849C47C2195965E6004AADA4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C47C1195965E6004AADA4 /* CoreData.framework */; };
+		84F0E8C01962A6CE002B640F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F0E8BF1962A6CE002B640F /* MapKit.framework */; };
+		84F0E8C51962DB08002B640F /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E8C41962DB08002B640F /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		849C47BF195965E6004AADA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		849C47C1195965E6004AADA4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		849C47E2195965E7004AADA4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84F0E8BF1962A6CE002B640F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84F0E8C31962DB08002B640F /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		84F0E8C41962DB08002B640F /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F0E8C01962A6CE002B640F /* MapKit.framework in Frameworks */,
 				84963791195DA12000E4551D /* SystemConfiguration.framework in Frameworks */,
 				845DF115195C6C0E00320C9E /* ImageIO.framework in Frameworks */,
 				845DF113195C6B1300320C9E /* SDWebImage.framework in Frameworks */,
@@ -113,6 +119,8 @@
 				848975C2196163CE0068F0BE /* UIWebViewController.m */,
 				8468B61C19618045004020E8 /* Support */,
 				8468B61D196180C3004020E8 /* Resources */,
+				84F0E8C31962DB08002B640F /* CustomCell.h */,
+				84F0E8C41962DB08002B640F /* CustomCell.m */,
 			);
 			path = RssNewsProject;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 		849C47BA195965E6004AADA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84F0E8BF1962A6CE002B640F /* MapKit.framework */,
 				84963790195DA12000E4551D /* SystemConfiguration.framework */,
 				845DF114195C6C0E00320C9E /* ImageIO.framework */,
 				845DF112195C6B1300320C9E /* SDWebImage.framework */,
@@ -219,6 +228,7 @@
 			files = (
 				848975C9196163CE0068F0BE /* NewsTableViewController.m in Sources */,
 				848975C7196163CE0068F0BE /* main.m in Sources */,
+				84F0E8C51962DB08002B640F /* CustomCell.m in Sources */,
 				848975C8196163CE0068F0BE /* NewsEntity.m in Sources */,
 				848975C3196163CE0068F0BE /* AppDelegate.m in Sources */,
 				848975CD196163CE0068F0BE /* UIWebViewController.m in Sources */,
