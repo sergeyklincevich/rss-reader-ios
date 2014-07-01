@@ -141,17 +141,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    int positionInList = 0;
-    if (indexPath.section == 0)
-    {
-        positionInList = indexPath.row;
-    } else
-    {
-        for (int i = 0; i < indexPath.section ; i++) {
-            positionInList += [self tableView:tableView numberOfRowsInSection:i];
-        }
-        positionInList +=  + indexPath.row;
-    }
+    int positionInList = [self getPositionInList:indexPath];
+//    if (indexPath.section == 0)
+//    {
+//        positionInList = indexPath.row;
+//    } else
+//    {
+//        for (int i = 0; i < indexPath.section ; i++) {
+//            positionInList += [self tableView:tableView numberOfRowsInSection:i];
+//        }
+//        positionInList +=  + indexPath.row;
+//    }
     
 //    // Configure the cell...
     NewsEntity *info = [listNews objectAtIndex:positionInList];
@@ -178,11 +178,27 @@
     return cell;
 }
 
+- (int)getPositionInList:(NSIndexPath *)indexPath
+{
+    int positionInList = 0;
+    if (indexPath.section == 0)
+    {
+        positionInList = indexPath.row;
+    } else
+    {
+        for (int i = 0; i < indexPath.section ; i++) {
+            positionInList += [self tableView:self.tableView numberOfRowsInSection:i];
+        }
+        positionInList +=  + indexPath.row;
+    }
+    return positionInList;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NewsEntity *newsEntity = self.listNews[indexPath.row];
+        NewsEntity *newsEntity = self.listNews[[self getPositionInList:indexPath]];
         NSString *string = newsEntity.link;
 
         [[segue destinationViewController] setOpenURL:string];

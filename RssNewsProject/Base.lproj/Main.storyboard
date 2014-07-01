@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="mxI-PO-5OD" detailTextLabel="JXM-lR-fLl" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="m0d-ak-lc9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="mxI-PO-5OD" detailTextLabel="JXM-lR-fLl" imageView="AyZ-aC-kPV" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="m0d-ak-lc9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
@@ -49,19 +49,23 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mxI-PO-5OD">
-                                            <rect key="frame" x="15" y="24" width="29" height="18"/>
+                                            <rect key="frame" x="109" y="24" width="29" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="40" id="JXM-lR-fLl">
-                                            <rect key="frame" x="15" y="42" width="40" height="14"/>
+                                            <rect key="frame" x="109" y="42" width="40" height="14"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="placeholder.jpg" id="AyZ-aC-kPV">
+                                            <rect key="frame" x="15" y="0.0" width="79" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,6 +123,9 @@
             <point key="canvasLocation" x="880" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder.jpg" width="128" height="128"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
