@@ -105,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RssNewsProject/AppDelegate.m"
-            timestampString = "425813516.879293"
+            filePath = "RssNewsProject/UIWebViewController.m"
+            timestampString = "425886395.304422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-managedObjectContext"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-configureView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,29 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RssNewsProject/AppDelegate.m"
-            timestampString = "425813518.606712"
+            filePath = "RssNewsProject/UIWebViewController.m"
+            timestampString = "425887246.074323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-managedObjectModel"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RssNewsProject/AppDelegate.m"
-            timestampString = "425813521.67054"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-persistentStoreCoordinator"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-connectedToInternet"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

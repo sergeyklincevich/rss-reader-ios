@@ -51,6 +51,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Check Internet" message:asd
                                                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
+        [loadingView setHidden:YES];
     }
 }
 
@@ -75,7 +76,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureView];
     
     loadingView = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2 - 40, 80, 80)];
     loadingView.backgroundColor = [UIColor colorWithWhite:0. alpha:0.6];
@@ -96,6 +96,8 @@
     [loadingView addSubview:lblLoading];
     
     [self.view addSubview:loadingView];
+    
+    [self configureView];
 }
 
 + (CGFloat) window_height   {
